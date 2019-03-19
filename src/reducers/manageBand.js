@@ -11,7 +11,10 @@ export default function manageBand(
         id: Math.random() * 1000000000000000000,
         name: action.name
       };
-      return { ...state, bands: [...state.bands, band] };
+      return { bands: [...state.bands, band] };
+
+    case "DELETE_BAND":
+      return { bands: state.bands.filter(band => band.id !== action.id) };
 
     default:
       return state;

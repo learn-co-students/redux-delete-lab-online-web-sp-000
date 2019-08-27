@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class Band extends Component {
+  constructor(props){
+    super(props)
+
+    
+  }
+
 
   handleOnClick = (event) => {
     event.preventDefault()
@@ -13,7 +19,7 @@ class Band extends Component {
     return(
       <div>
         <li>
-          {this.props.band.name} <button onClick={this.handleOnClick}>DELETE</button>
+          {this.props.band.name} <button onClick={() => this.props.deleteBand(this.props.band.id)}>DELETE</button>
         </li>
       </div>
     );

@@ -5,9 +5,9 @@ const Band = props => {
  
     return(
     	<div>
-      <span>{props.bandName}</span>
-  	  <span>{props.bandName}</span><button
-	  		onClick={() => props.delete(props.id)}>DELETE</button>
+     
+  	  <li>{props.bandName} <button
+	  		onClick={() => props.delete(props.id)}>DELETE</button> </li>
 	      
       </div>
     );

@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 
 class Band extends Component {
 
+  renderBands = (bands)=>(bands.map((b,id)=><li key={id}>{b}</li>) )
+      
+
+
   render() {
     return(
       <div>
-        Band Component
+        {this.renderBands(this.props.bands)}
       </div>
     );
   }

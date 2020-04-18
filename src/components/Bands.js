@@ -9,10 +9,8 @@ const Bands = props => {
   return (
     <div>
       {bands}
-      
     </div>
   );
-
 };
 
 export default Bands;

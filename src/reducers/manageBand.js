@@ -8,16 +8,15 @@ export default function manageBand(state = {
 
       const band = {
         id: uuid(),
-        bandName: action.name
+        name: action.name
       }
 
       return { ...state, bands: [...state.bands, band] }
 
     case 'DELETE_BAND': //! need to fill this out
       console.log('in DELETE_BAND, state', state)
-      console.log('in DELETE_BAND, action', action)
 
-      return {bands: state.bands.filter(band => band.id !== action.band.id)}
+      return {bands: state.bands.filter(band => band.id !== action.band)}
 
     default:
       return state;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Band extends Component {
 
-  render(props) {
+  render() {
     console.log('in Band render, props', props)
     return(
       <div>

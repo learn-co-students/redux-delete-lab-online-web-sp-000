@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class BandInput extends Component {
 
@@ -35,4 +36,8 @@ class BandInput extends Component {
   }
 };
 
-export default BandInput;
+const mapDispatchToProps = dispatch => ({
+  addBand: name => dispatch({ type: "ADD_BAND", name })
+})
+
+export default connect(null, mapDispatchToProps)(BandInput)

@@ -6,6 +6,7 @@ class Band extends Component {
     return(
       <div>
         Band Component
+        {console.log(this.props.bands)}
       </div>
     );
   }

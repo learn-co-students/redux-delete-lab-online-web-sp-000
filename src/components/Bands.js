@@ -5,10 +5,8 @@ import Band from './Band'
 class Bands extends Component {
    
     renderBands = () => {
-        // console.log(this.props.bands)
-    this.props.bands.map((band) => <li>{band.name}</li>)
+       return this.props.bands.map((band) => <Band delete={this.props.delete} key={band.id} band={band}/>)
     }
-    // <Band key={band.id} band={band.name}
 
     render(){
         return(

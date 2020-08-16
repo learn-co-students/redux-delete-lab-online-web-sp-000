@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Band from './Band';
 
-const Bands = props => {
-    const renderedBands = props.bands.map((band, index) => {
-        return <li key={index}>{band.name}</li>
-    })
+class Bands extends Component {
 
-    return (
-        <ul>{renderedBands}</ul>
-    );
-};
+    renderBands = () => (
+        this.props.bands.map((band) => <Band key={band.id} id={band.id} name={band.name} delete={this.props.deleteBand} />)
+    )
+
+    render() {
+        return (
+          <div>
+            <ul>{this.renderBands()}</ul>
+          </div>
+    )}
+}
 
 export default Bands

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Band from './Band'
 
 const Bands = props => {
-    console.log(props)
+    const bands = props.bands.map((band, id) => <Band key={id} {...band} deleteBand={props.deleteBand} />  )
 
     return (
         <div>
-            Bands Component
+            {bands}
         </div>
     )
 }

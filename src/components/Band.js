@@ -5,6 +5,7 @@ class Band extends Component {
   render() {
     return(
       <div>
+        {console.log(props)}
         Band Component
       </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BandsContainer from './components/BandsContainer'
+import BandInput from './components/BandInput'
 
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <BandsContainer />
-
+        <BandInput/>
       </div>
     );
   }

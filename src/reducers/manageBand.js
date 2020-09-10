@@ -8,15 +8,15 @@ export default function manageBand(state = {
       console.log('added band')
     const band = {
       id: uuid(),
-      bandName: action.bandName
+      name: action.name
     }
     return { bands: state.bands.concat(band) };
 
     case 'DELETE_BAND':
-    console.log('delete band', 'state', state, 'action', action)
+      console.log('delete band', 'state', state, 'action', action)
     let idx = state.bands.findIndex(band => band.id  === action.id)
-    return {bands: [...state.bands.slice(0, idx), ...state.bands.slice(idx + 1)]};
-    //return {bands: state.bands.filter(band => band.id !== action.id)}
+    //return {bands: [...state.bands.slice(0, idx), ...state.bands.slice(idx + 1)]};
+    return {bands: state.bands.filter(band => band.id !== action.id)}
 
     default:
     return state;

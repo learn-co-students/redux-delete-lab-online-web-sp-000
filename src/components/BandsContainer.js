@@ -19,7 +19,7 @@ class BandsContainer extends Component {
 const mapStateToProps = ({ bands }) => ({ bands })
 
 const mapDispatchToProps = dispatch => ({
-  addBand: bandName => dispatch({ type: "ADD_BAND", bandName }),
+  addBand: name => dispatch({ type: "ADD_BAND", name }),
   deleteBand: id => dispatch({ type: "DELETE_BAND", id})
 })
 

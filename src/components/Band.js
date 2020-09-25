@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Band extends Component {
 handleOnClick = () => {
-  this.props.deleteBand(this.props.id)
+  console.log("band",this.props)
+  this.props.deleteBand(this.props.band.id)
 }
   render() {
     

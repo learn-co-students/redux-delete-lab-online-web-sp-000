@@ -1,14 +1,26 @@
+//in charge of displaying the information for a single band
+
 import React, { Component } from 'react';
 
 class Band extends Component {
 
+  handleOnclick = () => {
+    this.props.deleteBand(this.props.id)
+  }
+
   render() {
     return(
       <div>
-        Band Component
+        <li>{this.props.name}</li>
+        <button onClick={this.handleOnclick}>
+          Delete</button>
       </div>
     );
   }
 };
 
 export default Band;
+
+//add button that dispatches delete action 
+//passes through bands id as an action.id
+//action provided as a prop from bandscontainer 

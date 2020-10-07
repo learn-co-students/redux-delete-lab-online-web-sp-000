@@ -9,7 +9,7 @@ class Band extends Component {
   render() {
     return (
       <div>
-        <li>{this.props.band.name}</li>
+        <li style={{display: "inline", marginRight: "10px"}}>{this.props.band.name}</li>
         <button onClick={this.handleChange}>Delete</button>
       </div>
     );

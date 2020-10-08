@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
 class BandInput extends Component {
-
   state = {
-    bandName: ''
-  }
+    bandName: "",
+  };
 
   handleOnChange(event) {
     this.setState({
@@ -14,9 +12,11 @@ class BandInput extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addBand(this.state.bandName);
+    const name = this.state.bandName;
+    console.log(`in handleOnSubmit, name is ${JSON.stringify(name)}`);
+    this.props.addBand(name);
     this.setState({
-      bandName: '',
+      bandName: "",
     });
   }
 
@@ -27,12 +27,13 @@ class BandInput extends Component {
           <input
             type="text"
             value={this.state.bandName}
-            onChange={(event) => this.handleOnChange(event)} />
+            onChange={(event) => this.handleOnChange(event)}
+          />
           <input type="submit" />
         </form>
       </div>
     );
   }
-};
+}
 
 export default BandInput;

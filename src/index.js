@@ -7,7 +7,14 @@ import manageBand from './reducers/manageBand'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-const store = createStore(manageBand)
+// import 'raf/polyfill';
+
+
+const store = createStore(
+  manageBand,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+  )
 
 
 ReactDOM.render(
@@ -16,3 +23,11 @@ ReactDOM.render(
   </Provider>,
 document.getElementById('root')
 )
+
+
+
+
+
+
+
+

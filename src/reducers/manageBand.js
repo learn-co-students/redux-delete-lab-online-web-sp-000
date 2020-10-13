@@ -1,12 +1,16 @@
 export default function manageBand(state = {
   bands: []
 }, action) {
-  switch (action.type) {
-    case 'ADD_BAND':
-
-      return { ...state, bands: [...state.bands, action.name] }
-
-    default:
-      return state;
+    switch (action.type) {
+      case 'ADD_BAND':
+        const band = { id: Math.random(), name: action.name }
+        return { ...state, bands: [...state.bands, band] }
+  
+      case 'DELETE_BAND':
+        const bands = state.bands.filter(band => band.id !== action.id) // We use our filter to find the id that matches the band we want to remove.
+        return { bands }
+        
+      default:
+        return state;
   }
 };

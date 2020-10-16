@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
 
 class BandInput extends Component {
 
@@ -21,6 +23,7 @@ class BandInput extends Component {
   }
 
   render() {
+    console.log("props", this.props);
     return (
       <div>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
@@ -35,4 +38,8 @@ class BandInput extends Component {
   }
 };
 
+
+
 export default BandInput;
+
+// export default connect (null, mapDispatchToProps)(BandInput);

@@ -38,6 +38,6 @@ action of type `'DELETE_BAND'` and then passes through that band's id as the
 `action.id`. This dispatched action should be provided as a prop from
 BandsContainer.
 
-6. You will have to alter the reducer such that it creates a new list of bands
+6. You will have toleaqr alter the reducer such that it creates a new list of bands
 that does not include the one whose delete button was pressed.
 

@@ -132,3 +132,5 @@ describe('Band Component with Redux', () => {
     expect(store.getState().bands[0].name).to.equal('Brian Eno');
   });
 });
+
+//

@@ -6,7 +6,7 @@ class Band extends Component {
     return(
       <div>
         <li>{this.props.band}</li>
-        <button onClick={() => this.props.delete()}>X</button>        
+        <button onClick={() => this.props.delete(this.props.id)}>X</button>        
       </div>
     );
   }

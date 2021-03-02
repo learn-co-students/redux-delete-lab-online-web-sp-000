@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class BandInput extends Component {
 
@@ -16,7 +17,7 @@ class BandInput extends Component {
     event.preventDefault();
     this.props.addBand(this.state.bandName);
     this.setState({
-      bandName: '',
+      bandName: event.target.value,
     });
   }
 

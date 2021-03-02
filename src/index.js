@@ -14,5 +14,6 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
+  // any component/file included within provider tags will have access to global state
 document.getElementById('root')
 )

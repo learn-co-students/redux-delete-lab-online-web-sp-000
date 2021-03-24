@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 // const Band = ({band, id}) => {
 //    return <li>{band}<button onClick={() => deleteBand(id)}>DELETE</button></li>
 // };
